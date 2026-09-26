@@ -49,13 +49,13 @@ Coincidental < Logical < Temporal < Procedural < Communicational < Sequential < 
 
 | Type | Description | Real-World Example |
 | :--- | :--- | :--- |
-| **1. Coincidental Cohesion** *(Worst)* | Elements are placed together completely arbitrarily with no meaningful relationship. | A generic `Utility` class that bundles `calculateSine()`, `printInvoice()`, and `checkDiskSpace()`. |
+| **1. Coincidental Cohesion** *(Worst)* | Elements are placed together completely arbitrarily with no meaningful relationship. | A module containing functions for printing a report, calculating salary, and validating passwords. |
 | **2. Logical Cohesion** | Elements perform logically similar tasks, but the exact operation executed is selected by an external control flag. | A function `handleInput(int eventType)` that executes completely different routines for mouse clicks, key presses, and touch taps via a `switch` statement. |
 | **3. Temporal Cohesion** | Elements are executed around the same time during program execution, without sharing data. | A function `initializeSystem()` that sets up logging, opens a database connection, and loads the GUI splash screen at startup. |
-| **4. Procedural Cohesion** | Elements execute in a specific sequence or algorithm, but operate on different data. | A routine `readConfigThenCheckPermissions()` where reading the file must precede permission checks, but they do not pass data between each other. |
+| **4. Procedural Cohesion** | Elements are grouped because they follow a particular sequence. | readData() validateData() processData() are grouped together |
 | **5. Communicational Cohesion** | All elements operate on or produce the exact same input/output data structure. | A function `processStudentRecord()` that takes a `Student` record, calculates the GPA, and generates the grade card report from that same record. |
 | **6. Sequential Cohesion** | The output of one element serves as the direct input to the next element (pipeline processing). | An audio routine `formatAndCompressAudio()`: Step 1 removes background noise, its raw audio output is fed to Step 2 for compression, and its output is written to disk. |
-| **7. Functional Cohesion** *(Best)* | Every single instruction inside the module contributes to executing **exactly one single, well-defined mathematical or logical task**. | `computeSquareRoot(double number)` or `calculateMonthlyPayroll(Employee emp)`. |
+| **7. Functional Cohesion** *(Best)* | Every single element inside the module contributes to executing **exactly one single, well-defined function**. | `computeSquareRoot(double number)` or `calculateMonthlyPayroll(Employee emp)`. |
 
 ---
 
